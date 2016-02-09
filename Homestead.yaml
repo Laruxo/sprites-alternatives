@@ -1,9 +1,9 @@
 ---
-ip: "192.168.10.10"
-memory: 2048
+ip: "192.168.100.101"
+memory: 512
 cpus: 1
-hostname: iconsalternatives
-name: iconsalternatives
+hostname: icons
+name: icons
 provider: virtualbox
 
 authorize: ~/.ssh/id_rsa.pub
@@ -16,21 +16,8 @@ folders:
       to: "/home/vagrant/iconsalternatives"
 
 sites:
-    - map: homestead.app
+    - map: icons.dev
       to: "/home/vagrant/iconsalternatives/public"
 
 databases:
     - homestead
-
-# blackfire:
-#     - id: foo
-#       token: bar
-#       client-id: foo
-#       client-token: bar
-
-# ports:
-#     - send: 50000
-#       to: 5000
-#     - send: 7777
-#       to: 777
-#       protocol: udp
