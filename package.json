@@ -1,0 +1,15 @@
+{
+  "name": "icons-alternatives",
+  "description": "Alternative icons solutions benchmark",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Laurynas Baltrėnas",
+  "repository": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-compass": "^1.0.4"
+  }
+}
