@@ -1,0 +1,14 @@
+{
+    "name": "lbaltrenas/icons-alternatives",
+    "description": "Tests",
+    "authors": [
+        {
+            "name": "Laurynas Baltrenas",
+            "email": "laruxo@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "laravel/homestead": "^3.0"
+    }
+}
