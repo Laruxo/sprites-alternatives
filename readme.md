@@ -1,0 +1,1 @@
+Alternative icons solutions benchmark
