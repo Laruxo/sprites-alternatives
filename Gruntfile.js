@@ -2,13 +2,21 @@ module.exports = function (grunt) {
     'use strict';
 
     grunt.initConfig({
+        clean: {
+            build: [
+                'public/sprites/*',
+                'public/svg/*'
+            ]
+        },
+
+        // Sprites ----------
         compass: {
             build: {
                 options: {
                     sassDir: 'resources/sass',
                     sassPath: 'resources/sass',
-                    cssDir: 'public/css',
-                    cssPath: 'public/css',
+                    cssDir: 'public/sprites',
+                    cssPath: 'public/sprites',
                     imagesDir: 'resources',
                     imagesPath: 'resources',
                     generatedImagesDir: 'public/sprites',
@@ -19,7 +27,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-
         pngmin: {
             build: {
                 options: {
@@ -36,11 +43,29 @@ module.exports = function (grunt) {
                 ]
             }
         },
-        clean: {
-            build: [
-                'public/css/*.css',
-                'public/sprites/*.png'
-            ]
+
+        // SVG ----------
+        svg_sprite: {
+            build: {
+                options: {
+                    mode: {
+                        css: {
+                            dest: "css",
+                            render: {
+                                css: true
+                            }
+                        },
+                        symbol: {
+                            dest: "symbol",
+                            render: {
+                                css: true
+                            }
+                        }
+                    }
+                },
+                src: ['resources/svg/*.svg'],
+                dest: 'public/svg'
+            }
         }
     });
 
@@ -48,9 +73,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-pngmin');
+    grunt.loadNpmTasks('grunt-svg-sprite');
     //#################### BEGIN TASKS REGISTER ####################
 
-    grunt.registerTask('default', ['clean', 'compass', 'pngmin']);
+    grunt.registerTask('default', ['clean', 'compass', 'pngmin', 'svg_sprite']);
 
     //#################### END TASKS REGISTER ####################
 
