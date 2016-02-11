@@ -5,9 +5,9 @@ For this test I used icons from [IcoMoon](https://github.com/Keyamoon/IcoMoon-Fr
 
 ## Setup
 1. For this test to work you have to install some dependencies:
-* grunt-cli (`npm i -g grunt-cli`)
-* [Compass](http://compass-style.org/install/) - optional
-  * Can be skipped if you don't want to see sprites
+   * grunt-cli (`npm i -g grunt-cli`)
+   * [Compass](http://compass-style.org/install/) - optional
+     * Can be skipped if you don't want to see sprites
 
 2. Run `npm i`
 3. Run `grunt` or `grunt no-sprites`
