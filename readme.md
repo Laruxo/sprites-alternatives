@@ -1,4 +1,6 @@
 # Alternative icons solutions benchmark
+For this test I used icons from [IcoMoon](https://github.com/Keyamoon/IcoMoon-Free)
+
 
 ## Sprites
 Uses compass
