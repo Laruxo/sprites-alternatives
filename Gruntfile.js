@@ -66,6 +66,17 @@ module.exports = function (grunt) {
                 src: ['resources/svg/*.svg'],
                 dest: 'public/svg'
             }
+        },
+
+        // Fonts ----------
+        webfont: {
+            build: {
+                src: 'resources/svg/*.svg',
+                dest: 'public/fonts',
+                options: {
+                    htmlDemo: false
+                }
+            }
         }
     });
 
@@ -74,14 +85,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-pngmin');
     grunt.loadNpmTasks('grunt-svg-sprite');
-    //#################### BEGIN TASKS REGISTER ####################
+    grunt.loadNpmTasks('grunt-webfont');
 
-    grunt.registerTask('default', ['clean', 'compass', 'pngmin', 'svg_sprite']);
-
-    //#################### END TASKS REGISTER ####################
-
-    // Watcher
-    grunt.event.on('watch', function (action, filepath, target) {
-        grunt.log.writeln(target + ': ' + filepath + ' has ' + action);
-    });
+    // Register tasks
+    grunt.registerTask('default', ['clean', 'compass', 'pngmin', 'svg_sprite', 'webfont']);
 };

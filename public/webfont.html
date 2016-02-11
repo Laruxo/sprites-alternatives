@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <title>Sprites</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="fonts/icons.css"/>
+
+    <style>
+        li > i {
+            display: inline-block;
+            /* font-size: 7em; */
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var list = document.getElementById('icons-list');
+            for (var i = 1; i <= 491; i++) {
+                var icon = document.createElement('i');
+                icon.classList.add('icon');
+                icon.classList.add('icon_' + i);
+
+                var box = document.createElement('li');
+                box.appendChild(icon);
+
+                list.appendChild(box);
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Web Font</h1>
+    <a class="back" href="index.html">Back</a>
+    <ul id="icons-list"></ul>
+</body>
+</html>
