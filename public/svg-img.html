@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <title>SVG CSS sprite</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="svg/css/sprite.css"/>
+
+    <style>
+        li > i {
+            display: inline-block;
+            /* zoom: 7; */
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var list = document.getElementById('icons-list');
+            for (var i = 1; i <= 491; i++) {
+                var icon = document.createElement('img');
+                icon.setAttribute('src', 'svg/img/svg/' + i + '.svg');
+
+                var box = document.createElement('li');
+                box.appendChild(icon);
+                list.appendChild(box);
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>SVG (img mode)</h1>
+    <a class="back" href="index.html">Back</a>
+    <ul id="icons-list"></ul>
+</body>
+</html>

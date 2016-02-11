@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <title>SVG CSS sprite</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="svg/css/sprite.css"/>
+
+    <style>
+        li > i {
+            display: inline-block;
+            /* zoom: 7; */
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var svg = document.getElementById('svg-css');
+            for (var i = 1; i <= 491; i++) {
+                var icon = document.createElement('i');
+                icon.classList.add('svg-resources--svg--' + i);
+                icon.classList.add('svg-resources--svg--' + i + '-dims');
+
+                var box = document.createElement('li');
+                box.appendChild(icon);
+
+                svg.appendChild(box);
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>SVG (CSS mode)</h1>
+    <a class="back" href="index.html">Back</a>
+    <ul id="svg-css"></ul>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <title>SVG &lt;symbol&gt; sprite preview | svg-sprite</title>
+
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="svg/symbol/sprite.css"/>
+
+    <style>
+        li > svg {
+            display: inline-block;
+            /* zoom: 7; */
+        }
+    </style>
+
+    <script src="https://rawgit.com/jonathantneal/svg4everybody/master/dist/svg4everybody.js"></script>
+    <script>svg4everybody();</script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var svg = document.getElementById('svg-symbol');
+            for (var i = 1; i <= 491; i++) {
+                var link = document.createElementNS("http://www.w3.org/2000/svg", "use");
+                link.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'svg/symbol/svg/sprite.symbol.svg#resources--svg--' + i);
+
+                var icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                icon.classList.add('svg-resources--svg--' + i + '-dims');
+                icon.appendChild(link);
+
+                var box = document.createElement('li');
+                box.appendChild(icon);
+
+                svg.appendChild(box);
+            }
+        });
+    </script>
+
+</head>
+<body>
+    <h1>SVG (symbol mode)</h1>
+    <a class="back" href="index.html">Back</a>
+    <ul id="svg-symbol"></ul>
+</body>
+</html>
