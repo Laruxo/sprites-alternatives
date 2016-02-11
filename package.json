@@ -1,10 +1,7 @@
 {
-  "name": "icons-alternatives",
-  "description": "Alternative icons solutions benchmark",
+  "name": "sprites-alternatives",
+  "description": "Most of the usable sprites alternative (created by grunt)",
   "version": "1.0.0",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Laurynas Baltrėnas",
   "repository": "",
   "license": "ISC",

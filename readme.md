@@ -1,4 +1,5 @@
-# Alternative icons solutions benchmark
+# Sprites Alternatives
+Most of the usable sprites alternative (created by grunt).
 For this test I used icons from [IcoMoon](https://github.com/Keyamoon/IcoMoon-Free)
 
 ## Setup
