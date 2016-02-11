@@ -1,14 +1,26 @@
 # Alternative icons solutions benchmark
 For this test I used icons from [IcoMoon](https://github.com/Keyamoon/IcoMoon-Free)
 
+## Setup
+For this test to work you have to install:
+* grunt-cli (`npm i -g grunt-cli`)
+* [Compass](http://compass-style.org/install/) - optional
+  * Can be skipped if you don't want to see sprites
+
+After installing dependencies run `grunt` or `grunt no-sprites`
+Then go to public directory and start php server
+
+    cd public/
+    php -S localhost:8080
+
+Then you can reach the page by going to [localhost:8080](http://localhost:8080)
 
 ## Sprites
-Uses compass
 #### Links
 * [grunt-contrib-compass](https://www.npmjs.com/package/grunt-contrib-compass)
   * Not scalable icon (looks blurry when scaled zoom or scale)
 * [grunt-pngmin](https://www.npmjs.com/package/grunt-pngmin)
-  * This does nothing. Compass already compresses file.
+  * Is used in project but does nothing. Compass already compresses file. Should be removed.
 
 ## SVG
 
@@ -27,7 +39,7 @@ Uses compass
     * Very easy to scale icons
     * Could be replaced with [grunt-svgstore](https://www.npmjs.com/package/grunt-svgstore)
 
-## Icon font
+## Font
 
 #### Links
 * [grunt-webfont](https://www.npmjs.com/package/grunt-webfont)
