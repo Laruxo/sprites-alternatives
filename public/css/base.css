@@ -2,39 +2,37 @@ body {
     padding: 0;
     margin: 0;
     background: #fafafa;
+    color: #fafafa;
     font-size: 1em;
+    font-family: "Open Sans", serif;
 }
 
 h1 {
-    background-color: #cccccc;
+    background-color: #00838F;
     text-align: center;
     padding: 1em 0;
-    margin: 0;
+    margin: 0 0 1em;
 }
 
 ul {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-flow: row wrap;
     margin: 0;
     padding: 0 2em;
     list-style: none;
 }
 
 li {
-    background: #cccccc top left repeat;
+    background: #00838F;
+    background-clip: padding-box;
     box-sizing: border-box;
+    border: 0.5em solid transparent;
     display: inline-block;
-    flex: 1 1 calc(25% - 3em);
+    flex: 1 0 20%;
     height: auto;
     padding: 1em;
     position: relative;
     text-align: center;
-    margin: 0 1em 1em 0;
-}
-
-li:nth-child(4n) {
-    margin-right: 0;
 }
 
 a {
@@ -43,10 +41,9 @@ a {
 }
 
 .back {
-    background: #cccccc;
+    background: #00838F;
     color: inherit;
     display: block;
-    font-size: 1em;
     margin: 2em auto;
     padding: 1em;
     text-decoration: none;
