@@ -1,3 +1,35 @@
 @import "compass/utilities/sprites";
+
 @import "images/*.png";
+
+$sprites2x-map: sprite-map("images2x/*.png");
+$sprites2x-url: sprite-url($sprites2x-map);
+
+@mixin useNxSprite($sprite, $spriteMap, $spriteUrl, $multiplier: 1, $renderSize: false, $offsetX: 0, $offsetY: 0) {
+    $spritePosition: sprite-position($spriteMap, $sprite, $offsetX * $multiplier, $offsetY * $multiplier);
+    background: transparent $spriteUrl no-repeat nth($spritePosition, 1) / $multiplier nth($spritePosition, 2) / $multiplier;
+    @if ($multiplier > 1) {
+        background-size: (image-width(sprite-path($spriteMap)) / $multiplier) (image-height(sprite-path($spriteMap)) / $multiplier);
+    }
+    @if ($renderSize) {
+        height: image-height(sprite-file($spriteMap, $sprite)) / $multiplier;
+        width: image-width(sprite-file($spriteMap, $sprite)) / $multiplier;
+    }
+}
+
+@mixin sprite($map, $sprite, $dimensions: false, $offset-x: 0, $offset-y: 0, $use-percentages: false, $use-magic-selectors: not $disable-magic-sprite-selectors, $separator: $default-sprite-separator) {
+    @include sprite-background-position($map, $sprite, $offset-x, $offset-y, $use-percentages);
+    @if $dimensions {
+        @include sprite-dimensions($map, $sprite);
+    }
+    @if $use-magic-selectors {
+        @include sprite-selectors($map, $sprite, $sprite, $offset-x, $offset-y, $use-percentages, $separator);
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        @include useNxSprite($sprite, $sprites2x-map, $sprites2x-url, 2, $dimensions, $offset-x, $offset-y);
+    }
+    //TODO: add media query for 3x and 4x
+}
+
 @include all-images-sprites;
