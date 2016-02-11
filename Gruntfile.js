@@ -5,7 +5,9 @@ module.exports = function (grunt) {
         clean: {
             build: [
                 'public/sprites/*',
-                'public/svg/*'
+                'public/svg/css/*',
+                'public/svg/symbol/*',
+                'public/fonts/*'
             ]
         },
 
