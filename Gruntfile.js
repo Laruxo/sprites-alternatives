@@ -76,7 +76,13 @@ module.exports = function (grunt) {
                 src: 'resources/svg/*.svg',
                 dest: 'public/fonts',
                 options: {
-                    htmlDemo: false
+                    autoHint: false,
+                    htmlDemo: false,
+                    engine: 'node',
+                    // can be removed if using fontforge engine
+                    fontHeight: 16,
+                    descent: 8
+                    // ---
                 }
             }
         }
@@ -91,4 +97,5 @@ module.exports = function (grunt) {
 
     // Register tasks
     grunt.registerTask('default', ['clean', 'compass', 'pngmin', 'svg_sprite', 'webfont']);
+    grunt.registerTask('no-sprites', ['clean', 'svg_sprite', 'webfont']);
 };
