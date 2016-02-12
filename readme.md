@@ -18,6 +18,17 @@ For this test I used icons from [IcoMoon](https://github.com/Keyamoon/IcoMoon-Fr
 
 Then you can reach the page by going to [localhost:8080](http://localhost:8080)
 
+## Some Statistics
+In real system these numbers may be improved.
+
+               | Sprites    | SVG img     | SVG css    | SVG symbol | Font
+ ------------- | ---------- | ----------- | ---------- | ---------- | -----------
+ **Requests**  | 2          | 492         | 2          | 2 (+1 IE)  | 2
+ **Load time** | 3 + 13     | 869 + 14    | 3 + 13     | 3 + 12     | 2 + 13
+ **Size**      | 50.9 + 134 | ~471 + 90.2 | 214 + 90.2 | 198 + 33.1 | 25.6 + 20.3
+
+*Load time is in ms and size is in KB. First number - image/font, second number - css.
+
 ## Used techniques
 
 #### Sprites
