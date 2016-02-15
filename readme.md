@@ -21,13 +21,16 @@ Then you can reach the page by going to [localhost:8080](http://localhost:8080)
 ## Some Statistics
 In real system these numbers may be improved.
 
-               | Sprites    | SVG img     | SVG css    | SVG symbol | Font
- ------------- | ---------- | ----------- | ---------- | ---------- | -----------
- **Requests**  | 2          | 492         | 2          | 2 (+1 IE)  | 2
- **Load time** | 3 + 13     | 869 + 14    | 3 + 13     | 3 + 12     | 2 + 13
- **Size**      | 50.9 + 134 | ~471 + 90.2 | 214 + 90.2 | 198 + 33.1 | 25.6 + 20.3
+                | Sprites    | SVG img     | SVG css    | SVG symbol | Font
+ -------------- | ---------- | ----------- | ---------- | ---------- | -----------
+ **Requests**   | 2          | 492         | 2          | 2 (+1 IE)  | 2
+ **Size**       | 50.9 + 134 | ~471 + 90.2 | 214 + 90.2 | 198 + 33.1 | 25.6 + 20.3
+ **Load time**  | 19         | 296         | 34         | 34         | 17
+ **Render time**| 26         | 327         | 41         | 45         | 79
+ **Paint time** | 11         | 71          | 21         | 4          | 5
 
-*Load time is in ms and size is in KB. First number - image/font, second number - css.
+**Size is in KB, First number - image/font, second number - css.
+***All times are in ms.
 
 ## Used techniques
 
